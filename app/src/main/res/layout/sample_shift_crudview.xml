@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/shift_crud_name"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:hint="@string/name"
+        android:singleLine="true">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/shift_crud_short_name"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shift_crud_name"
+        android:hint="@string/short_name"
+        android:maxLength="3"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/shift_crud_time_label"
+        android:layout_below="@id/shift_crud_short_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shift_time"/>
+    <GridLayout
+        android:id="@+id/shift_crud_time_panel"
+        android:layout_below="@id/shift_crud_time_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2">
+
+        <Button
+            android:id="@+id/shift_crud_start_time"
+            android:layout_column="0"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/shift_crud_end_time"
+            android:layout_column="1"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1" />
+
+    </GridLayout>
+
+    <View
+        android:id="@+id/shift_crud_color_box"
+        android:layout_below="@id/shift_crud_time_panel"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout android:id="@+id/_shift_crud_current_color"
+        android:layout_below="@id/shift_crud_color_box"
+        android:layout_height="15dp"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp" >
+        <SeekBar
+            android:id="@+id/shift_crud_color_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progressDrawable="@android:color/transparent"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

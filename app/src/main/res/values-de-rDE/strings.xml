@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Schichtplaner</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="shift_time">Zeitraum</string>
+    <string name="create_shift">Erstelle Schicht</string>
+    <string name="name">Name</string>
+    <string name="short_name">Abkürzung</string>
+    <string name="shift_created_toast">Erstellt</string>
+    <string name="shift_updated_toast">Aktualisiert</string>
+    <string name="shift_dismissed_toast">Abgebrochen</string>
+    <string name="edit_shift">Bearbeite Schicht</string>
+</resources>

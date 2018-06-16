@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" android:drawable="@color/caldroid_holo_blue_light"  >
+        <android:drawable>
+            <shape>
+
+            </shape>
+        </android:drawable>
+    </item>
+    <item android:state_checked="true" android:drawable="@color/caldroid_holo_blue_dark"  />
+</selector>

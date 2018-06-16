@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Shift Planner</string>
     <string name="action_settings">Settings</string>
@@ -5,10 +6,10 @@
     <string name="cancel">Dismiss</string>
     <string name="shift_time">Time Span</string>
     <string name="create_shift">Create Shift</string>
-    <string name="edit_shift">Edit Shift</string>
     <string name="name">Name</string>
     <string name="short_name">Short Name</string>
     <string name="shift_created_toast">Created</string>
     <string name="shift_updated_toast">Updated</string>
     <string name="shift_dismissed_toast">Dismissed</string>
+    <string name="edit_shift">Edit Shift</string>
 </resources>
