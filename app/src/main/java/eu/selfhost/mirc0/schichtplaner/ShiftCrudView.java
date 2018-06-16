@@ -161,15 +161,6 @@ public class ShiftCrudView extends RelativeLayout {
         int g = 0;
         int b = 0;
 
-//        int[] colors = {0xFF0000FF, 0xFF00FF00, 0xFF00FFFF, 0xFFFF0000, 0xFFFF00FF, 0xFFFFFF00};
-//      int[] colors = {Color.BLUE, Color.GREEN, Color.CYAN, Color.RED, Color.MAGENTA, Color.YELLOW};
-
-//        if (progress > 768){
-//            r  = progress - 768;
-//            if (r > 256)
-//                r = 256;
-//        }
-
         if(progress == 0){
             b = 255;
         } else if(progress < 256) {
@@ -205,8 +196,7 @@ public class ShiftCrudView extends RelativeLayout {
 //                                                                    RED ->
         //int[] colors = {0xFF0000FF, 0xFF00FF00, 0xFF00FFFF, 0xFFFF0000, 0xFFFF00FF, 0xFFFFFF00}
 //                             0            256         512          768        1024     1280
-        if (r == 0){
-//            < 512
+        if (r == 0){ // < 512
             if (g == 255) // > 256
                 return 256 + b;
             else // < 256
