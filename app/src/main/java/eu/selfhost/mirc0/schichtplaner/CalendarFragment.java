@@ -1,7 +1,9 @@
 package eu.selfhost.mirc0.schichtplaner;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.icu.util.Calendar;
 import android.net.Uri;
 import android.os.Bundle;
@@ -178,18 +180,25 @@ public class CalendarFragment extends Fragment {
         if (_menuDataContext == null)
             return false;
 
+        View view = getView();
+        if (view == null) {
+            return false;
+        }
+        View rootView = view.getRootView();
+        Context context = rootView.getContext();
+
         switch (item.getItemId()) {
             case R.id.edit_shift_menu_item:
-                View view = getView();
-                if (view == null) {
-                    return false;
-                }
-                View rootView = view.getRootView();
-                Context context = rootView.getContext();
                 _editShiftListener.editShift(context, _menuDataContext);
                 break;
             case R.id.delete_shift_menu_item:
-                _repository.delete(_menuDataContext);
+                new AlertDialog.Builder(context)
+                        .setTitle(String.format(getString(R.string.delete_shift_question_title), _menuDataContext.getName()))
+                        .setMessage(String.format(getString(R.string.delete_shift_question), _menuDataContext.getName()))
+                        .setPositiveButton(R.string.ok, (dialogInterface, i) -> _repository.delete(_menuDataContext))
+                        .setNegativeButton(R.string.cancel, (dialogInterface, i) -> {})
+                        .create().show();
+
                 break;
             default:
                 return false;
@@ -361,10 +370,9 @@ public class CalendarFragment extends Fragment {
     }
 
     private boolean isDateMatching(Date date, WorkingShift s) {
-        long thisDate = date.getTime();
-        long nextDate = thisDate + 24*60*60*1000;
+        long time = date.getTime();
         long currentShift = s.getShift().getTime();
-        return currentShift > thisDate && nextDate > currentShift && s.getShiftId() == _currentShift.getId();
+        return currentShift == time && s.getShiftId() == _currentShift.getId();
     }
 
     @Override

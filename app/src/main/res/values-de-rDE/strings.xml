@@ -12,4 +12,8 @@
     <string name="shift_updated_toast">Aktualisiert</string>
     <string name="shift_dismissed_toast">Abgebrochen</string>
     <string name="edit_shift">Bearbeite Schicht</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="delete">Löschen</string>
+    <string name="delete_shift_question">Möchten Sie %s löschen? Alle erstellten Schichten gehen verloren.</string>
+    <string name="delete_shift_question_title">%s löschen?</string>
 </resources>

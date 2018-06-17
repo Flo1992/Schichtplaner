@@ -11,4 +11,8 @@
     <string name="shift_created_toast">Created</string>
     <string name="shift_updated_toast">Updated</string>
     <string name="shift_dismissed_toast">Dismissed</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="delete_shift_question">Do you want to delete %s? All created dates will be lost.</string>
+    <string name="delete_shift_question_title">Delete %s?</string>
 </resources>

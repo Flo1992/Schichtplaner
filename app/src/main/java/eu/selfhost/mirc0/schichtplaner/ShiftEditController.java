@@ -19,7 +19,7 @@ public class ShiftEditController {
     public void createNewShift(final Context context) {
 
         final Shift shift = new Shift();
-        editShift(context, shift, R.string.edit_shift, () -> {
+        editShift(context, shift, R.string.create_shift, () -> {
 
             Toast.makeText(context, R.string.shift_created_toast, Toast.LENGTH_LONG).show();
             repository.createNew(shift);
@@ -28,7 +28,7 @@ public class ShiftEditController {
 
     public void editShift(Context context, Shift shift) {
 
-        editShift(context, shift, R.string.create_shift, () -> {
+        editShift(context, shift, R.string.edit_shift, () -> {
 
             Toast.makeText(context, R.string.shift_updated_toast, Toast.LENGTH_LONG).show();
             repository.update(shift);
